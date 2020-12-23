@@ -1,5 +1,9 @@
 #!/bin/sh
 #README: setup a mini http server and host a few large blank files for basic speedtest
+#How to use:
+# wget https://github.com/shermanx/misc/blob/master/minisrv.sh
+# chmod +x minisrv.sh
+# ./minisrv.sh
 
 sudo killall mini_httpd
 sudo apt install mini-httpd
