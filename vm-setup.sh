@@ -2,7 +2,8 @@
 # wget https://raw.githubusercontent.com/shermanx/misc/master/vm-setup.sh && chmod +x vm-setup.sh && ./vm-setup.sh
 
 sudo -i
-sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute
+sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl
+curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
 sudo iptables -L
 sudo iptables-save > ~/iptables-rules
 sudo iptables -P OUTPUT ACCEPT
