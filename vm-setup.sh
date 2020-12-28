@@ -3,7 +3,8 @@
 
 sudo -i
 sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl
-curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
+# curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
+# wget -qO- git.io/besttrace | bash
 
 #reset iptables
 sudo iptables -L
