@@ -2,7 +2,7 @@
 # wget https://raw.githubusercontent.com/shermanx/misc/master/vm-setup.sh && chmod +x vm-setup.sh && ./vm-setup.sh
 
 sudo -i
-sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl
+sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl vnstat -y
 # curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
 # wget -qO- git.io/besttrace | bash
 
