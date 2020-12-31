@@ -14,7 +14,7 @@ read cmd
 if [ "$cmd" = "y" ]; then
   echo -n "What's your server name?"
   read sid
-  curl https://raw.githubusercontent.com/shermanx/misc/master/.profile |sed 's/YOUR_SERVER_ID/"$sid"/g' > .profile
+  curl https://raw.githubusercontent.com/shermanx/misc/master/.profile |sed "s/YOUR_SERVER_ID/$sid/g" > .profile
 fi
 
 #reset iptables
