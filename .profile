@@ -26,8 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-
-export PS1="\[\033[0;31m\]X1(`dig +short myip.opendns.com @resolver1.opendns.com`)-\[\033[0;32m\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
+export PS1="\[\033[0;31m\]YOUR_SERVER_ID(`dig +short myip.opendns.com @resolver1.opendns.com`)-\[\033[0;32m\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
 echo "***"
 sensors
 echo "***"
