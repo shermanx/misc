@@ -12,7 +12,7 @@ fi
 echo -n "Setup bash profile? (y/N):"
 read cmd
 if [ "$cmd" = "y" ]; then
-  echo What\'s your server name?
+  echo -n "What\'s your server name?"
   read sid
   curl https://raw.githubusercontent.com/shermanx/misc/master/.profile |sed 's/YOUR_SERVER_ID/$sid/g' > .profile
 fi
