@@ -1,7 +1,7 @@
 # To setup a fresh VM environ
 # wget https://raw.githubusercontent.com/shermanx/misc/master/vm-setup.sh -O vm-setup.sh && chmod +x vm-setup.sh && ./vm-setup.sh
 
-echo "Update and Install? (y/N):"
+echo -n "Update and Install? (y/N):"
 read cmd
 if [ "$cmd" = "y" ]; then
   sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl vnstat -y
@@ -9,7 +9,7 @@ fi
 # curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
 # wget -qO- git.io/besttrace | bash
 
-echo "Setup bash profile? (y/N):"
+echo -n "Setup bash profile? (y/N):"
 read cmd
 if [ "$cmd" = "y" ]; then
   echo What\'s your server name?
