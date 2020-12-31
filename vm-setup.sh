@@ -3,8 +3,7 @@
 
 echo "Update and Install? (y/N):"
 read cmd
-if [ $cmd == 'y' ]
-then
+if [ "$cmd" = "y" ]; then
   sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl vnstat -y
 fi
 # curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
@@ -12,8 +11,7 @@ fi
 
 echo "Setup bash profile? (y/N):"
 read cmd
-if [ $cmd == 'y' ]
-then
+if [ "$cmd" = "y" ]; then
   echo What\'s your server name?
   read sid
   curl https://raw.githubusercontent.com/shermanx/misc/master/.profile |sed 's/YOUR_SERVER_ID/$sid/g' > .profile
