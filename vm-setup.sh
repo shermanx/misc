@@ -18,18 +18,25 @@ if [ "$cmd" = "y" ]; then
 fi
 
 #reset iptables
-sudo iptables -L
-sudo iptables-save > ~/iptables-rules
-sudo iptables -P OUTPUT ACCEPT
-sudo iptables -P FORWARD ACCEPT
-sudo iptables -F
-sudo iptables -L
-sudo iptables-save > ~/iptables-rules.allow-all
+echo -n "Reset ip tables? (y/N):"
+read cmd
+if [ "$cmd" = "y" ]; then
+  sudo iptables -L
+  sudo iptables-save > ~/iptables-rules
+  sudo iptables -P OUTPUT ACCEPT
+  sudo iptables -P FORWARD ACCEPT
+  sudo iptables -F
+  sudo iptables -L
+  sudo iptables-save > ~/iptables-rules.allow-all
+fi
 
 #install v2ray
-sudo -i
-bash <(curl -s -L https://git.io/v2ray.sh)
-#port 61286
+echo -n "Install v2ray? (y/N):"
+read cmd
+if [ "$cmd" = "y" ]; then
+  sudo bash <(curl -s -L https://git.io/v2ray.sh)
+  #port 61286
+fi
 
 #Monitor
 netstat -tanplc |grep 61286
