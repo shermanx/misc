@@ -33,6 +33,6 @@ echo "***"
 vnstat -d
 echo "***"
 ps -A|grep v2
-echo "***"cat 
-ls
+echo "***"
+ls -al
 echo "***"
