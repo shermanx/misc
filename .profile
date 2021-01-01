@@ -30,7 +30,9 @@ export PS1="\[\033[0;31m\]YOUR_SERVER_ID(`dig +short myip.opendns.com @resolver1
 echo "***"
 sensors
 echo "***"
-ps -A|grep v2
+vnstat -d
 echo "***"
+ps -A|grep v2
+echo "***"cat 
 ls
 echo "***"
