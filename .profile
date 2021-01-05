@@ -26,6 +26,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+alias mywatch="while [ 1 ] ; do netstat -tepan|sort|grep -e 6225 -e 612 --color=auto; echo -n \"***** \"; date; sleep 2; done"
+
 export PS1="\[\033[0;31m\]YOUR_SERVER_ID(`dig +short myip.opendns.com @resolver1.opendns.com`)-\[\033[0;32m\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
 echo "***"
 sensors
