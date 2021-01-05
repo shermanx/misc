@@ -26,7 +26,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-alias mywatch="while [ 1 ] ; do sudo netstat -tepan|sort|grep -e 6225 -e 612 --color=auto; echo -n \"***** \"; date; sleep 2; done"
+#alias mywatch="while [ 1 ] ; do sudo netstat -tepan|sort|grep -e 6225 -e 612 --color=auto; echo -n \"***** \"; date; sleep 2; done"
+alias mywatch="while [ 1 ] ; do sudo netstat -tpan|grep -i -e esta -e listen --color=auto|grep  -e 6225 -e 612|awk '{print \$6,\"\t\"\$7,\"\t\"\$4,\"\t\"\$5}'|sort; echo -n \"***** \"; date; sleep 2; done"
 
 export PS1="\[\033[0;31m\]YOUR_SERVER_ID(`dig +short myip.opendns.com @resolver1.opendns.com`)-\[\033[0;32m\]\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
 echo "***"
