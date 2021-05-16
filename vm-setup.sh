@@ -4,7 +4,7 @@
 echo -n "Update and Install required softwares? (y/N):"
 read cmd
 if [ "$cmd" = "y" ]; then
-  sudo apt update && sudo apt upgrade -y && sudo apt install net-tools speedtest-cli iftop nethogs traceroute curl vnstat make gcc -y
+  sudo apt update && sudo apt upgrade -y && sudo apt install dnsutils net-tools speedtest-cli iftop nethogs traceroute curl vnstat make gcc -y
 fi
 # curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s full
 # wget -qO- git.io/besttrace | bash
